@@ -17,7 +17,7 @@
         <form action="./model/login/loginValidation.php" method="POST">
                 <h1>Login</h1>
                 <div class="social-container">
-                   <p><i class="fa-solid fa-apple-whole text-warning"></i> ST. Anne pharmacy Inventory and Customer Information System</p>
+                   <p><i class="fa-solid fa-apple-whole text-warning"></i> Pharmacy Inventory and Customer Information System</p>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-success" id="basic-addon1"><i class="fa-solid fa-user text-white"></i></span>
@@ -35,7 +35,7 @@
             <form action="./model/login/loginValidation.php" method="post">
                 <h1>Login</h1>
                 <div class="social-container d-flex">
-                   <p><i class="fa-solid fa-apple-whole text-warning"></i> ST. Anne pharmacy Inventory and Customer Information System</p>
+                   <p><i class="fa-solid fa-apple-whole text-warning"></i>Pharmacy Inventory and Customer Information System</p>
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text bg-success" id="basic-addon1"><i class="fa-solid fa-user text-white"></i></span>
