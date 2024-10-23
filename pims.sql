@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2024 at 09:56 AM
+-- Generation Time: Oct 23, 2024 at 01:44 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -35,6 +35,13 @@ CREATE TABLE `addnewstaff` (
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `addnewstaff`
+--
+
+INSERT INTO `addnewstaff` (`id`, `Name`, `Lastname`, `username`, `password`) VALUES
+(1, 'Africa', 'Jatakalula', 'africa', 'ca27105169ce49882f4d13d02a48ac06');
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +58,13 @@ CREATE TABLE `customer` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`id`, `name`, `age`, `gender`, `address`, `created_at`, `updated_at`) VALUES
+(1, 'Samule ', 25, 'male', '3880 Nkulumane 5', '2024-10-23 08:24:26', '2024-10-23 08:24:26');
+
 -- --------------------------------------------------------
 
 --
@@ -64,11 +78,20 @@ CREATE TABLE `deliveries` (
   `product` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
   `Total_purchased` decimal(10,2) NOT NULL,
+  `Date_purchased` date NOT NULL,
+  `Delivery_date` date NOT NULL,
   `Expiry_Date` date NOT NULL,
   `Receive_by` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `deliveries`
+--
+
+INSERT INTO `deliveries` (`id`, `Supplier_name`, `Refference_No`, `product`, `quantity`, `Total_purchased`, `Date_purchased`, `Delivery_date`, `Expiry_Date`, `Receive_by`, `created_at`, `updated_at`) VALUES
+(1, 'Pharma corp', '121445552', 'amoxcilin', 500, '250.00', '0000-00-00', '0000-00-00', '2024-11-23', 'Africa', '2024-10-23 10:44:49', '2024-10-23 10:44:49');
 
 -- --------------------------------------------------------
 
@@ -94,6 +117,24 @@ INSERT INTO `manager` (`id`, `first_name`, `last_name`, `username`, `password_mn
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `medicinecategories`
+--
+
+CREATE TABLE `medicinecategories` (
+  `id` int(11) NOT NULL,
+  `Medicine_Category` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `medicinecategories`
+--
+
+INSERT INTO `medicinecategories` (`id`, `Medicine_Category`) VALUES
+(1, 'Helloe');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `medicinelist`
 --
 
@@ -112,6 +153,31 @@ CREATE TABLE `medicinelist` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `medicinelist`
+--
+
+INSERT INTO `medicinelist` (`id`, `product_id`, `med_name`, `Unit`, `type`, `categories`, `price`, `quantitypcs`, `exp_date`, `description`, `prescription`, `created_at`) VALUES
+(1, '1242', 'amoxcilin', '50', 'headache', 'Helloe', '0.50', 25, '2024-10-31', 'Helloe', '', '2024-10-23 09:46:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `medicinetype`
+--
+
+CREATE TABLE `medicinetype` (
+  `id` int(11) NOT NULL,
+  `MedicineType` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `medicinetype`
+--
+
+INSERT INTO `medicinetype` (`id`, `MedicineType`) VALUES
+(1, 'headache');
+
 -- --------------------------------------------------------
 
 --
@@ -125,10 +191,18 @@ CREATE TABLE `purchase` (
   `quantity` int(11) NOT NULL,
   `total` decimal(10,2) NOT NULL,
   `Staff_incharge` varchar(100) NOT NULL,
-  `Date_purchased` date NOT NULL,
+  `Date_purchased` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `purchase`
+--
+
+INSERT INTO `purchase` (`id`, `Customer`, `Product`, `quantity`, `total`, `Staff_incharge`, `Date_purchased`, `created_at`, `updated_at`) VALUES
+(1, 'Samule ', 'amoxcilin', 20, '10.00', 'Africa', '0000-00-00 00:00:00', '2024-10-23 10:14:42', '2024-10-23 10:14:42'),
+(2, 'Samule ', 'amoxcilin', 2, '1.00', 'Africa', '2024-10-23 10:42:00', '2024-10-23 10:42:00', '2024-10-23 10:42:00');
 
 -- --------------------------------------------------------
 
@@ -142,6 +216,14 @@ CREATE TABLE `supplier` (
   `contact` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `supplier`
+--
+
+INSERT INTO `supplier` (`id`, `name`, `contact`, `address`) VALUES
+(1, 'Pharma corp', '945454728', '#207 No big. Maligaaya manila Philipines'),
+(2, 'Unilab Corp.', '967342345', 'Brgy. di Magiba');
 
 --
 -- Indexes for dumped tables
@@ -174,10 +256,24 @@ ALTER TABLE `manager`
   ADD UNIQUE KEY `username` (`username`);
 
 --
+-- Indexes for table `medicinecategories`
+--
+ALTER TABLE `medicinecategories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `Medicine_Category` (`Medicine_Category`);
+
+--
 -- Indexes for table `medicinelist`
 --
 ALTER TABLE `medicinelist`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `medicinetype`
+--
+ALTER TABLE `medicinetype`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `MedicineType` (`MedicineType`);
 
 --
 -- Indexes for table `purchase`
@@ -199,19 +295,19 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `addnewstaff`
 --
 ALTER TABLE `addnewstaff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `deliveries`
 --
 ALTER TABLE `deliveries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `manager`
@@ -220,22 +316,34 @@ ALTER TABLE `manager`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `medicinecategories`
+--
+ALTER TABLE `medicinecategories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `medicinelist`
 --
 ALTER TABLE `medicinelist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `medicinetype`
+--
+ALTER TABLE `medicinetype`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `purchase`
 --
 ALTER TABLE `purchase`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `supplier`
 --
 ALTER TABLE `supplier`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
