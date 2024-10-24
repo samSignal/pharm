@@ -64,9 +64,10 @@
         </div>
     </div>
     <footer>
-        <div class="footer-programmer mt-5 text-secondary">
-            <strong>&copy Harvy M. Gascon 2022</strong>
-        </div>
+    <div class="footer-programmer mt-5 text-secondary">
+    <strong>&copy <?php echo date('Y'); ?></strong>
+    </div>
+
 <?php 
 require_once './inc/footer.php';
 require_once './inc/popmsg.php';
