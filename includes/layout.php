@@ -42,6 +42,7 @@
     </div>
 
     <?php include 'bottom.php'; ?>
+    <?php include 'modals.php'; ?>
     <?php echo $scripts ?? ''; ?>
 </body>
 </html>

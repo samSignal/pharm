@@ -1,6 +1,6 @@
 <?php
-  require_once '../../inc/session.php';
-  require_once '../../inc/config.php';
+  require_once '../../includes/session.php';
+  require_once '../../includes/config.php';
 
 $monthly_purchased = $pdo->prepare("SELECT YEAR(Date_purchased) as years,MONTH(Date_purchased) 
 as months, SUM(total) as TOTAL FROM purchase GROUP BY MONTH(Date_purchased)");

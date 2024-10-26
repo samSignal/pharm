@@ -1,6 +1,6 @@
 <?php 
-     require_once '../../inc/session.php';
-     require_once '../../inc/config.php';
+     require_once '../../includes/session.php';
+     require_once '../../includes/config.php';
 
      $md_list = $pdo->prepare('SELECT * FROM medicinelist');
      $md_list->execute();

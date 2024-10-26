@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once '../../inc/config.php'; // Include database configuration
+require_once '../../includes/session.php';
+require_once '../../includes/config.php'; // Include database configuration
 
 $errors = [];
 

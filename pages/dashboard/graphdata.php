@@ -1,6 +1,6 @@
 <?php
-  require_once '../../inc/session.php';
-  require_once '../../inc/config.php';
+  require_once '../../includes/session.php';
+  require_once '../../includes/config.php';
 
   $expired = $pdo->prepare("SELECT COUNT(*) FROM medicinelist WHERE (exp_date <= CURDATE())");
   $expired->execute();

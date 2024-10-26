@@ -21,7 +21,6 @@
             <div class="card-body">
                 <div class="media">
                     <div class="mr-3">
-                        <a href="#"><img src="" width="38" height="38" class="rounded-circle" alt="photo"></a>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../assets/css/components.min.css">
     <link rel="stylesheet" href="../../assets/css/colors.min.css">
     <!-- /global stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
     <!-- Core JS files -->
     <script src="../../assets/js/main/jquery.min.js"></script>
