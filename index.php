@@ -9,41 +9,39 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Pharmacy Inventory and Customer Information System</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Global stylesheets -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900">
-<link rel="stylesheet" href="assets/css/icons/icomoon/styles.css">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/bootstrap_limitless.min.css">
-<link rel="stylesheet" href="assets/css/layout.min.css">
-<link rel="stylesheet" href="assets/css/components.min.css">
-<link rel="stylesheet" href="assets/css/colors.min.css">
-<!-- /global stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900">
+    <link rel="stylesheet" href="assets/css/icons/icomoon/styles.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap_limitless.min.css">
+    <link rel="stylesheet" href="assets/css/layout.min.css">
+    <link rel="stylesheet" href="assets/css/components.min.css">
+    <link rel="stylesheet" href="assets/css/colors.min.css">
+    <!-- /global stylesheets -->
 
-<!-- Core JS files -->
-<script src="assets/js/main/jquery.min.js"></script>
-<script src="assets/js/main/bootstrap.bundle.min.js"></script>
-<script src="assets/js/plugins/loaders/blockui.min.js"></script>
-<!-- /core JS files -->
+    <!-- Core JS files -->
+    <script src="assets/js/main/jquery.min.js"></script>
+    <script src="assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <!-- /core JS files -->
 
-<!-- Theme JS files -->
-<script src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="global_assets/js/demo_pages/login.js"></script>
-<!-- /theme JS files -->
+    <!-- Theme JS files -->
+    <script src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="global_assets/js/demo_pages/login.js"></script>
+    <!-- /theme JS files -->
 
-<style>
-    .login-cover {
-    background-image: url(assets/images/login_cover.png); /* Update the path */
-    background-size: cover; /* Ensures the background covers the whole area */
-    background-position: center; /* Centers the background image */
-    height: auto; /* Full height of the viewport */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    <style>
+        .login-cover {
+        background-image: url(assets/images/login_cover.png); /* Update the path */
+        background-size: cover; /* Ensures the background covers the whole area */
+        background-position: center; /* Centers the background image */
+        height: auto; /* Full height of the viewport */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 </style>
 

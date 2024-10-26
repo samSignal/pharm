@@ -82,7 +82,7 @@ if (isset($_POST['m-submit'])) {
                 // Redirect based on roles dynamically
                 if (in_array('admin', $roles)) {
                     $_SESSION['success'] = 'Welcome' . $_SESSION['first_name'] . '!';
-                    header('Location: ../dashboard/dashboard.php'); // Redirect to admin dashboard
+                    header('Location: ../../pages/dashboard/dashboard.php'); // Redirect to admin dashboard
                 } elseif (in_array('user', $roles)) {
                     $_SESSION['success'] = 'Welcome' . $_SESSION['first_name'] . '!';
                     header('location: ../../views/purchase/purchase.php'); // Redirect to editor dashboard
