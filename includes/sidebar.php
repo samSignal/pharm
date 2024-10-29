@@ -33,155 +33,55 @@
 
                 <!-- Main -->
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="../../pages/dashboard/dashboard.php" class="nav-link">
                         <i class="icon-home4"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                    <li class="nav-item nav-item-submenu  ">
-                        <a href="#" class="nav-link"><i class="icon-graduation2"></i> <span> Academics</span></a>
-
-                        <ul class="nav nav-group-sub" data-submenu-title="Manage Academics">
-
-                  
-                            <li class="nav-item"><a href="" class="nav-link">Timetables</a></li>
-                        </ul>
-                    </li>
-                    
-              
-                    <li class="nav-item nav-item-submenu ">
-                        <a href="#" class="nav-link"><i class="icon-office"></i> <span> Administrative</span></a>
-
-                        <ul class="nav nav-group-sub" data-submenu-title="Administrative">
-                           
-                            <li class="nav-item nav-item-submenu">
-
-                                <a href="#" class="nav-link">Payments</a>
-
-                                <ul class="nav nav-group-sub">
-                                    <li class="nav-item"><a href="" class="nav-link">Create Payment</a></li>
-                                    <li class="nav-item"><a href="" class="nav-link ">Manage Payments</a></li>
-                                    <li class="nav-item"><a href="" class="nav-link ">Student Payments</a></li>
-
-                                </ul>
-
-                            </li>
-
-                        </ul>
-                    </li>
-                
-                
-                    <li class="nav-item nav-item-submenu ">
-                        <a href="#" class="nav-link"><i class="icon-users"></i> <span> Students</span></a>
-
-                        <ul class="nav nav-group-sub" data-submenu-title="Manage Students">
-                           
-                           
-                                <li class="nav-item">
-                                    <a href=""
-                                       class="nav-link ">Admit Student</a>
-                                </li>
-
-
-                            
-                            <li class="nav-item nav-item-submenu">
-                                <a href="#" class="nav-link ">Student Information</a>
-                                <ul class="nav nav-group-sub">
-                                </ul>
-                            </li>
-
-                           
-
-                            
-                            <li class="nav-item nav-item-submenu ">Student Promotion</a>
-                            <ul class="nav nav-group-sub">
-                                <li class="nav-item"><a href="" class="nav-link">Promote Students</a></li>
-                                <li class="nav-item"><a href="" class="nav-link">Manage Promotions</a></li>
-                            </ul>
-
-                            </li>
-
-                           
-                            <li class="nav-item"><a href="" class="nav-link ">Students Graduated</a></li>
-    
-
-                        </ul>
-                    </li>
-                
-
-               
-                   
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="icon-users4"></i> <span> Users</span></a>
-                    </li>
-
-                    
-                    <li class="nav-item">
-                        <a href=""  class="nav-link"><i class="icon-windows2"></i> <span> Classes</span></a>
-                    </li>
-
-                    
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="icon-home9"></i> <span> Dormitories</span></a>
-                    </li>
-
-                    
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="icon-fence"></i> <span>Sections</span></a>
-                    </li>
-
-                    
-                    <li class="nav-item">
-                        <a href="" class="nav-link"><i class="icon-pin"></i> <span>Subjects</span></a>
-                    </li>
-                
-
-              
-                
-                <li class="nav-item nav-item-submenu ">
-                    <a href="#" class="nav-link"><i class="icon-books"></i> <span> Exams</span></a>
-
-                    <ul class="nav nav-group-sub" data-submenu-title="Manage Exams">
-                       
-
-                        
-                            <li class="nav-item">
-                                <a href=""
-                                   class="nav-link ">Exam List</a>
-                            </li>
-
-                            
-                            <li class="nav-item">
-                                    <a href=""
-                                       class="nav-link">Grades</a>
-                            </li>
-
-                          
-                            <li class="nav-item">
-                                <a href="" class="nav-link ">Tabulation Sheet</a>
-                            </li>
-
-                            
-                            <li class="nav-item">
-                                <a href="" class="nav-link">Batch Fix</a>
-                            </li>
-                        
-                            <li class="nav-item">
-                                <a href=""
-                                   class="nav-link">Marks</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="" class="nav-link">Marksheet</a>
-                            </li>
-                    </ul>
+                <li class="nav-item">
+                    <a href="../../pages/inventory/inventory.php" class="nav-link">
+                        <i class="icon-database"></i>
+                        <span>Inventory</span>
+                    </a>
                 </li>
-                
-
 
                 <li class="nav-item">
-                    <a href="" class="nav-link"><i class="icon-user"></i> <span>My Account</span></a>
+                    <a href="../../pages/customer/customer.php" class="nav-link">
+                        <i class="fa-solid fa-id-card"></i>
+                        <span>Customer</span>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-item-submenu  ">
+                    <a href="#" class="nav-link"><i class="icon-list"></i> <span> Medicine</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Medicine">
+                        <li class="nav-item"> <a href=".././medicineList/medicineList.php"  class="nav-link"><i class="fa-solid fa-list"></i>Medicine List</a></li>
+                        <li class="nav-item"> <a href=".././medicineType/medicineType.php"  class="nav-link"><i class="fa-solid fa-list-check"></i>Medicine Type</a></li>
+                        <li class="nav-item"> <a href=".././medicineCategory/medicineCategory.php"  class="nav-link"><i class="fa-solid fa-list-ol"></i>Med Category</a></li>
+                        <li class="nav-item"> <a href=".././expiredMedicine/expiredMedicine.php"  class="nav-link"><i class="fa-solid fa-bars-staggered"></i>Expired Medicine</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-item-submenu  ">
+                    <a href="#" class="nav-link"><i class="icon-file-text"></i> <span> Sales</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Manage Sales">
+                        <li class="nav-item"> <a href=".././medicineList/medicineList.php"  class="nav-link"><i class="fa-solid fa-receipt"></i>Transactions</a></li>
+                        <li class="nav-item"> <a href=".././medicineType/medicineType.php"  class="nav-link"><i class="fa-solid fa-wallet"></i>Daily Sales</a></li>
+                        <li class="nav-item"> <a href=".././medicineCategory/medicineCategory.php"  class="nav-link"><i class="fa-solid fa-hand-holding-dollar"></i>Sales Summary</a></li>
+                    </ul>
+                </li>
+                                    
+                <li class="nav-item">
+                    <a href="" class="nav-link"><i class="icon-truck"></i> <span> Deliveries</span></a>
+                </li>
+                 
+                <li class="nav-item">
+                    <a href=""  class="nav-link"><i class="fa-solid fa-boxes-packing"></i> <span> Supplier List</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link"><i class="icon-gear"></i> <span>Settings</span></a>
                 </li>
 
                 </ul>

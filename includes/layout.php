@@ -8,9 +8,10 @@
     <meta id="csrf-token" name="csrf-token" content="<?php echo htmlspecialchars($csrf_token ?? '', ENT_QUOTES); ?>">
     <meta name="author" content="CJ Inspired">
 
-    <title><?php echo htmlspecialchars($page_title ?? 'Default Page Title'); ?> | <?php echo htmlspecialchars($app_name ?? 'My Application'); ?></title>
+    <title><?php echo htmlspecialchars($page_title ?? 'Default Page Title'); ?> </title>
 
     <?php include 'inc_top.php'; ?>
+    
 </head>
 
 <body>
@@ -21,7 +22,7 @@
         <?php include 'sidebar.php'; ?>
 
         <div class="content-wrapper">
-            <?php include 'header.php'; ?>
+            
 
             <div class="content">
                 <!-- Error Alert Area -->
