@@ -1,4 +1,5 @@
 <?php
+     define('BASE_URL', '/pharm/pages/');
      define('HOST','localhost');
      define('USERNAME','root');
      define('PASSWORD','');

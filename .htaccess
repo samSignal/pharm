@@ -1,0 +1,23 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Check if the request is for a file or directory that actually exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite rule to map clean URLs to actual PHP files
+# This rule will rewrite "/customers" to "/pages/customer/customer.php"
+RewriteRule ^dashboard$ /pharm/pages/dashboard/dashboard.php [L]
+RewriteRule ^inventory$ /pharm/pages/inventory/inventory.php [L]
+RewriteRule ^customers$ /pharm/pages/customer/customer.php [L]
+RewriteRule ^medicine-list$ /pharm/pages/medicineList/medicineList.php [L]
+RewriteRule ^medicine-type$ /pharm/pages/medicineType/medicineType.php [L]
+RewriteRule ^medicine-category$ /pharm/pages/medicineCategory/medicineCategory.php [L]
+RewriteRule ^expired-medicine$ /pharm/pages/expiredMedicine/expiredMedicine.php [L]
+RewriteRule ^transactions$ /pharm/pages/sales/transactions.php [L]
+RewriteRule ^daily-sales$ /pharm/pages/sales/dailySales.php [L]
+RewriteRule ^sales-summary$ /pharm/pages/sales/salesSummary.php [L]
+RewriteRule ^deliveries$ /pharm/pages/deliveries/deliveries.php [L]
+RewriteRule ^supplier-list$ /pharm/pages/supplier/supplierList.php [L]
+RewriteRule ^settings$ /pharm/pages/settings/settings.php [L]
+
