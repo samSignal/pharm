@@ -44,6 +44,7 @@
 
     <?php include 'bottom.php'; ?>
     <?php include 'modals.php'; ?>
+    <?php include 'popmsg.php'; ?>
     <?php echo $scripts ?? ''; ?>
 </body>
 </html>
