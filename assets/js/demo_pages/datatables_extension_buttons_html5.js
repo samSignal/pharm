@@ -110,18 +110,7 @@ var DatatableButtonsHtml5 = function() {
         $('.datatable-button-html5-tab').DataTable({
             buttons: {            
                 buttons: [
-                    {
-                        extend: 'copyHtml5',
-                        className: 'btn btn-light',
-                        text: '<i class="icon-copy3 mr-2"></i> Copy'
-                    },
-                    {
-                        extend: 'csvHtml5',
-                        className: 'btn btn-light',
-                        text: '<i class="icon-file-spreadsheet mr-2"></i> CSV',
-                        fieldSeparator: '\t',
-                        extension: '.tsv'
-                    }
+
                 ]
             }
         });

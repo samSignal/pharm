@@ -48,7 +48,7 @@
 
 <body>
 
-    <div class="navbar navbar-expand-md navbar-light">
+    <div class="navbar navbar-expand-md navbar-dark">
         <div class="mt-2 mr-5">
             <a  class="d-inline-block font-size-lg">
                 <!--  <img src="global_assets/images/favicon.png" alt="Logo" class="logo" style="height: 40px; vertical-align: middle;"> -->

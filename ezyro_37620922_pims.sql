@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 27, 2024 at 01:08 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Host: sql109.ezyro.com
+-- Generation Time: Oct 30, 2024 at 09:38 AM
+-- Server version: 10.6.19-MariaDB
+-- PHP Version: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,14 +34,14 @@ CREATE TABLE `addnewstaff` (
   `Lastname` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `addnewstaff`
 --
 
 INSERT INTO `addnewstaff` (`id`, `Name`, `Lastname`, `username`, `password`) VALUES
-(1, 'Africa', 'Jatakalula', 'africa', 'ca27105169ce49882f4d13d02a48ac06');
+(1, 'Africa', 'Jatakalula', 'africa', '827ccb0eea8a706c4c34a16891f84e7b');
 
 -- --------------------------------------------------------
 
@@ -56,7 +57,7 @@ CREATE TABLE `customer` (
   `address` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer`
@@ -78,20 +79,20 @@ CREATE TABLE `deliveries` (
   `product` varchar(100) NOT NULL,
   `quantity` int(11) NOT NULL,
   `Total_purchased` decimal(10,2) NOT NULL,
-  `Date_purchased` date NOT NULL,
-  `Delivery_date` date NOT NULL,
-  `Expiry_Date` date NOT NULL,
+  `Date_purchased` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `Delivery_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `Expiry_Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `Receive_by` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `deliveries`
 --
 
 INSERT INTO `deliveries` (`id`, `Supplier_name`, `Refference_No`, `product`, `quantity`, `Total_purchased`, `Date_purchased`, `Delivery_date`, `Expiry_Date`, `Receive_by`, `created_at`, `updated_at`) VALUES
-(1, 'Pharma corp', '121445552', 'amoxcilin', 500, '250.00', '0000-00-00', '0000-00-00', '2024-11-23', 'Africa', '2024-10-23 10:44:49', '2024-10-23 10:44:49');
+(1, 'Pharma corp', '121445552', 'amoxcilin', 500, '250.00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '2024-11-23 08:00:00', 'Africa', '2024-10-23 10:44:49', '2024-10-23 10:44:49');
 
 -- --------------------------------------------------------
 
@@ -105,7 +106,7 @@ CREATE TABLE `manager` (
   `last_name` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password_mngr` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `manager`
@@ -123,7 +124,7 @@ INSERT INTO `manager` (`id`, `first_name`, `last_name`, `username`, `password_mn
 CREATE TABLE `medicinecategories` (
   `id` int(11) NOT NULL,
   `Medicine_Category` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `medicinecategories`
@@ -151,7 +152,7 @@ CREATE TABLE `medicinelist` (
   `description` text DEFAULT NULL,
   `prescription` enum('yes','no') NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `medicinelist`
@@ -169,7 +170,7 @@ INSERT INTO `medicinelist` (`id`, `product_id`, `med_name`, `Unit`, `type`, `cat
 CREATE TABLE `medicinetype` (
   `id` int(11) NOT NULL,
   `MedicineType` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `medicinetype`
@@ -194,7 +195,7 @@ CREATE TABLE `purchase` (
   `Date_purchased` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `purchase`
@@ -213,7 +214,7 @@ INSERT INTO `purchase` (`id`, `Customer`, `Product`, `quantity`, `total`, `Staff
 CREATE TABLE `roles` (
   `id` int(11) NOT NULL,
   `role_name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `roles`
@@ -234,7 +235,7 @@ CREATE TABLE `supplier` (
   `name` varchar(100) NOT NULL,
   `contact` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `supplier`
@@ -258,7 +259,7 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
@@ -277,7 +278,7 @@ INSERT INTO `users` (`id`, `username`, `first_name`, `last_name`, `password`, `e
 CREATE TABLE `user_roles` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user_roles`

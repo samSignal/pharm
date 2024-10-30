@@ -23,7 +23,7 @@
 
         <div class="content-wrapper">
             
-
+            <?php include 'header.php'; ?>
             <div class="content">
                 <!-- Error Alert Area -->
                 <?php if (!empty($errors)): ?>
