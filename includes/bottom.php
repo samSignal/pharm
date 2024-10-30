@@ -31,7 +31,6 @@
 <script src="../../assets/js/plugins/ui/fullcalendar/fullcalendar.min.js"></script>
 
 
-<script src=" ../../assets/js/app.js "></script>
 <script src="../../assets/js/demo_pages/form_wizard.js"></script>
 <script src="../../assets/js/demo_pages/form_select2.js"></script>
 <script src="../../assets/js/demo_pages/datatables_extension_buttons_html5.js"></script>
