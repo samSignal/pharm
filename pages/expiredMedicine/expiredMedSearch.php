@@ -1,7 +1,6 @@
 <?php
-
-require_once '../../includes/session.php';
-require_once '../../includes/config.php';
+    require_once '../../includes/session.php';
+    require_once '../../includes/config.php';
 
     if(isset($_POST['submit'])){
         $date1 = htmlentities($_POST['firstdate']);
@@ -13,7 +12,10 @@ require_once '../../includes/config.php';
         $expired->bindValue(':date1',$date1);
         $expired->bindValue(':date2',$date2);
         ?>
-        <h5 class="text-center d-flex justify-content-center mb-3">Medicines that will expired from <?php echo $newdate1?> To <?php echo $newdate2?></h5>
+        <h5 class="text-center d-flex justify-content-center mb-3">
+            Medicines that expired from &nbsp; <span class="text-danger"><?php echo $newdate1; ?></span> &nbsp; to &nbsp; <span class="text-danger"><?php echo $newdate2; ?></span>
+        </h5>
+
         <?php
      }else{
            $expired = $pdo->prepare("SELECT * FROM medicinelist WHERE (exp_date <= CURDATE())"); 
