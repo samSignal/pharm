@@ -85,7 +85,7 @@
     <div class="page-content login-cover">
         <div class="content-wrapper">
             <div class="content d-flex justify-content-center align-items-center">
-                <form class="login-form" method="post" action="./model/login/login.php">
+                <form class="login-form" method="post" action="./pages/login/login.php">
                     
                     <div class="card mb-0">
                         <div class="card-body">

@@ -4,7 +4,7 @@
  -->
 
 <!-- Modal for deleting a medicine Type-->
-<div class="modal fade " id="staticBackdrop<?php echo $med->id;?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="staticBackdrop<?php echo $med->id;?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-center text-secondary">
@@ -13,7 +13,7 @@
                       <p>Data will be deleted permanently!</p>
             </div>
                 <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
                         <a href="delete_medtype.php?id=<?php echo $med->id;?>" type="button" class="btn btn-danger">Confirm</a>
                </div>
                 </div>
@@ -24,7 +24,7 @@
     </div>
 
  <!-- Modal for deleting a medicine list-->
- <div class="modal fade " id="medicinelist<?php echo $datas->id ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <div class="modal fade " id="medicinelist<?php echo $datas->id ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-center text-secondary">
@@ -33,7 +33,7 @@
                       <p>Data will be deleted permanently!</p>
             </div>
                 <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
                         <a href="deleteMedlist.php?id=<?php echo $datas->id?>" type="button" class="btn btn-danger">Confirm</a>
                </div>
                 </div>
@@ -45,17 +45,17 @@
 
 
 <!-- Modal for Editing medicine medicine-->
-<div class="modal fade modal-lg"  id="edit<?php echo $datas->id?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">  
+<div class="modal fade modal-lg"  id="edit<?php echo $datas->id?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">  
 <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title text-center" id="staticBackdropLabel">Edit medicine</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <?php require_once '../../model/medicineList/editMed.php';?>
+      <?php require_once '../../pages/medicineList/editMed.php';?>
 
-      <form action="../../model/medicineList/medUpdate.php" method="POST" class="d-flex justify-content-center">
+      <form action="../../pages/medicineList/medUpdate.php" method="POST" class="d-flex justify-content-center">
         
         <div class="col-6 p-2">
           <input type="hidden" name="id" value="<?php echo $datas->id;?>"/>
@@ -100,7 +100,7 @@
  
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger w-25" data-bs-dismiss="modal">Close  <i class="fa-solid fa-xmark"></i></button>
+        <button type="button" class="btn btn-danger w-25" data-dismiss="modal">Close  <i class="fa-solid fa-xmark"></i></button>
         <button type="submit" name="submit" class="btn btn-success w-25">Submit  <i class="fa-solid fa-check"></i></button>
       </div>
       </form>
@@ -111,7 +111,7 @@
 
 
 <!-- Modal for deleting a medicine Category-->
-<div class="modal fade " id="medCategory<?php  echo $med->id; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="medCategory<?php  echo $med->id; ?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -120,7 +120,7 @@
          <p>Data will be deleted permanently!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="deleteMedCategory.php?id=<?php  echo $med->id;?>" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>
@@ -131,7 +131,7 @@
 </div>
 
 <!-- Modal for deleting a medicine Category-->
-<div class="modal fade " id="supplier<?php echo $sup->id;?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="supplier<?php echo $sup->id;?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -140,7 +140,7 @@
          <p>Data will be deleted permanently!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="delete.php?id=<?php echo $sup->id;?>" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>
@@ -151,7 +151,7 @@
 </div>
 
 <!-- Modal for deleting a Manager-->
-<div class="modal fade " id="Manager<?php echo $manager->id;?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="Manager<?php echo $manager->id;?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -160,7 +160,7 @@
          <p>Data will be deleted permanently!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="deleteManager.php?id=<?php echo $manager->id;?>" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>
@@ -171,7 +171,7 @@
 </div>
 
 <!-- Modal for deleting a customer-->
-<div class="modal fade " id="customer<?php echo $customer->id?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="customer<?php echo $customer->id?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -180,7 +180,7 @@
          <p>Data will be deleted permanently!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="deletecustomer.php?id=<?php echo $customer->id?>" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>
@@ -191,7 +191,7 @@
 </div>
 
 <!-- Modal for deleting a staff-->
-<div class="modal fade " id="staff<?php echo $staff->id;?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="staff<?php echo $staff->id;?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -200,7 +200,7 @@
          <p>Data will be deleted permanently!</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="deleteStaff.php?id=<?php echo $staff->id;?>" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>
@@ -211,7 +211,7 @@
 </div>
 
 <!-- Modal for logging in to add staff-->
-<div class="modal fade " id="staff" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="staff" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
@@ -229,7 +229,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <button type="submit" name="SU_submit" class="btn btn-danger">Confirm</button>
         </form>
       </div>
@@ -241,7 +241,7 @@
 </div>
 
 <!-- Modal for logging in to add manager-->
-<div class="modal fade " id="manager" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="manager" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
@@ -259,7 +259,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <button type="submit" name="SU_submit" class="btn btn-danger">Confirm</button>
         </form>
       </div>
@@ -272,7 +272,7 @@
 
 
 <!-- Modal for Changing the password-->
-<div class="modal fade " id="ChangePass" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="ChangePass" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body">
@@ -293,7 +293,7 @@
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <button type="submit" name="submit_pass" class="btn btn-danger">Confirm</button>
         </form>
       </div>
@@ -306,7 +306,7 @@
 
 
 <!-- Modal for logging out-->
-<div class="modal fade " id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade " id="logout" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-body text-center text-secondary">
@@ -315,7 +315,7 @@
          <p>Are you sure you want to logout?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cancel X</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">cancel X</button>
         <a href="../sidenav/logout.php" type="button" class="btn btn-danger">Confirm</a>
       </div>
     </div>

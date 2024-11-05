@@ -41,10 +41,8 @@
             </div>
         </div>
     </div>
-
-    <?php include 'bottom.php'; ?>
-    <?php include 'modals.php'; ?>
     <?php include 'popmsg.php'; ?>
+    <?php include 'bottom.php'; ?>
     <?php echo $scripts ?? ''; ?>
 </body>
 </html>

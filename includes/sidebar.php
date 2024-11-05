@@ -66,22 +66,22 @@
                 <li class="nav-item nav-item-submenu  ">
                     <a href="#" class="nav-link"><i class="icon-file-text"></i> <span> Sales</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Sales">
-                        <li class="nav-item"> <a href=".././medicineList/medicineList.php"  class="nav-link"><i class="fa-solid fa-receipt"></i>Transactions</a></li>
-                        <li class="nav-item"> <a href=".././medicineType/medicineType.php"  class="nav-link"><i class="fa-solid fa-wallet"></i>Daily Sales</a></li>
-                        <li class="nav-item"> <a href=".././medicineCategory/medicineCategory.php"  class="nav-link"><i class="fa-solid fa-hand-holding-dollar"></i>Sales Summary</a></li>
+                        <li class="nav-item"> <a href=".././transactions/transactions.php"  class="nav-link"><i class="fa-solid fa-receipt"></i>Transactions</a></li>
+                        <li class="nav-item"> <a href=".././Dailysales/dailysales.php"  class="nav-link"><i class="fa-solid fa-wallet"></i>Daily Sales</a></li>
+                        <li class="nav-item"> <a href=".././salesSummary/salesSummary.php"  class="nav-link"><i class="fa-solid fa-hand-holding-dollar"></i>Sales Summary</a></li>
                     </ul>
                 </li>
                                     
                 <li class="nav-item">
-                    <a href="" class="nav-link"><i class="icon-truck"></i> <span> Deliveries</span></a>
+                    <a href=".././Deliveries/deliveries.php" class="nav-link"><i class="icon-truck"></i> <span> Deliveries</span></a>
                 </li>
                  
                 <li class="nav-item">
-                    <a href=""  class="nav-link"><i class="fa-solid fa-boxes-packing"></i> <span> Supplier List</span></a>
+                    <a href=".././supplier/supplier.php"  class="nav-link"><i class="fa-solid fa-boxes-packing"></i> <span> Supplier List</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="" class="nav-link"><i class="icon-gear"></i> <span>Settings</span></a>
+                    <a href=".././settings/settings.php" class="nav-link"><i class="icon-gear"></i> <span>Settings</span></a>
                 </li>
 
                 </ul>

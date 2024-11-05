@@ -1,5 +1,5 @@
 <?php   
-    require_once '../../inc/config.php';
+    require_once '../../includes/config.php';
     if(!isset($_SESSION)){
         session_start();
      }

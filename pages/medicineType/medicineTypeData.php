@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../inc/config.php';
+    require_once '../../includes/config.php';
     $medType_data = $pdo->prepare("SELECT * FROM medicinetype");
      $medType_data->execute();
     if($medType_data->rowCount() > 0){
@@ -13,7 +13,7 @@
                 </button>
                 </td>
             </tr>
-            <?php include '../../inc/modals.php';?>
+            <?php include '../../includes/modals.php';?>
         <?php endforeach?>
     <?php }
     else{

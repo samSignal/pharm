@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../inc/config.php';
+    require_once '../../includes/config.php';
     
     $medType_data = $pdo->prepare("SELECT * FROM medicinecategories");
      $medType_data->execute();
@@ -12,7 +12,7 @@
                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#medCategory<?php  echo $med->id; ?>">
                 <i class="fa-solid fa-trash"></i>  Delete
             </button>
-            <?php include '../../inc/modals.php';?>
+            <?php include '../../includes/modals.php';?>
         </td>
             </tr>
         <?php endforeach?>

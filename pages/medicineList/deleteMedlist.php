@@ -1,6 +1,6 @@
 <?php   
-    require_once '../../inc/config.php';
-    require_once '../../inc/session.php';
+    require_once '../../includes/config.php';
+    require_once '../../includes/session.php';
     if (isset($_GET['id']))
     {
         $id = $_GET['id'];

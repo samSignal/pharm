@@ -42,7 +42,7 @@ ob_start();  // Start output buffering
         <table class="table datatable-button-html5-tab">
             <thead>
                 <tr>
-                    <th>ID</th>
+                    <th>No.</th>
                     <th scope="col">Brand Name</th>
                     <th scope="col">Unit</th>
                     <th scope="col">Quantity</th>
