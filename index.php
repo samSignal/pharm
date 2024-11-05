@@ -1,4 +1,4 @@
-<?php require_once './inc/session.php';?>
+<?php require_once './includes/session.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -143,4 +143,4 @@
 
 </html>
 <?php 
-require_once './inc/popmsg.php';
+require_once './includes/popmsg.php';

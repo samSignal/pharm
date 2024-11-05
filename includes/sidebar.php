@@ -49,7 +49,7 @@
                 <li class="nav-item">
                     <a href="../../pages/customer/customer.php" class="nav-link">
                         <i class="fa-solid fa-id-card"></i>
-                        <span>Customer</span>
+                        <span>Customers</span>
                     </a>
                 </li>
 
