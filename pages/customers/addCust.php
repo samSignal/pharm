@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
 
-        <form action="addsupplier.php" method="POST" >
+        <form action="addCustomer.php" method="POST" >
 
             <div class="row">
                 <div class="mb-3 col-12">
@@ -31,8 +31,8 @@
                     <label for="gender" class="mb-2 text-center">Gender</label>
                     <select class="form-control select" name="gender" id="gender">
                         <option value="" selected disabled>Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female"></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
                     </select>
                 </div>
             </div>
