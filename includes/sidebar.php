@@ -58,7 +58,7 @@
                     <ul class="nav nav-group-sub" data-submenu-title="Manage Medicine">
                         <li class="nav-item"> <a href=".././medicineList/medicineList.php"  class="nav-link"><i class="fa-solid fa-list"></i>Medicine List</a></li>
                         <li class="nav-item"> <a href=".././medicineType/medicineType.php"  class="nav-link"><i class="fa-solid fa-list-check"></i>Medicine Type</a></li>
-                        <li class="nav-item"> <a href=".././medicineCategory/medicineCategory.php"  class="nav-link"><i class="fa-solid fa-list-ol"></i>Med Category</a></li>
+                        <li class="nav-item"> <a href=".././medicineCategory/medicineCategory.php"  class="nav-link"><i class="fa-solid fa-list-ol"></i>Medicine Category</a></li>
                         <li class="nav-item"> <a href=".././expiredMedicine/expiredMedicine.php"  class="nav-link"><i class="fa-solid fa-bars-staggered"></i>Expired Medicine</a></li>
                     </ul>
                 </li>

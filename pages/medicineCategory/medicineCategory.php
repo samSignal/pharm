@@ -18,6 +18,9 @@ ob_start();  // Start output buffering
 <div class="card">
     <div class="card-header header-elements-inline">
         <h6 class="card-title">Manage <?php echo htmlspecialchars($page_title ?? 'Default Page Title'); ?></h6>
+        <button type="button" class="btn btn-primary ms-auto" data-toggle="modal" data-target="#addMedCatModal">
+            <i class="fa-solid fa-plus"></i> Add Medicine Category
+        </button>
     </div>
     <ul class="nav nav-tabs nav-tabs-highlight">
     </ul>
@@ -38,7 +41,7 @@ ob_start();  // Start output buffering
     </div>
 </div>
 
-
+<?php  require_once 'addMedCat.php';?>
 <?php
 $content = ob_get_clean();  // Capture the output and store it in $content
 
