@@ -1,9 +1,9 @@
 <!-- Modal for adding medicine -->
-<div class="modal fade" id="addSupplierModal" data-backdrop="static" data-keyboard="false"  tabindex="-1" aria-labelledby="addSupplierModalLabel" aria-hidden="true">
+<div class="modal fade" id="addCustomerModal" data-backdrop="static" data-keyboard="false"  tabindex="-1" aria-labelledby="addCustomerModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addSupplierModalLabel">Add Medicine</h5>
+        <h5 class="modal-title" id="addCustomerModalLabel">Add New Customer</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -14,21 +14,32 @@
 
             <div class="row">
                 <div class="mb-3 col-12">
-                    <label for="medicineType" class="form-label">Supplier</label>
-                    <input type="text" class="form-control" id="supplier" name="supplier" placeholder="Supplier Name" required>
+                    <label for="first name" class="mb-2 text-center">Name</label>
+                    <input type="text" class="form-control mb-4" name="name" placeholder="Fullname" required>
                 </div>
             </div>
 
             <div class="row">
                 <div class="mb-3 col-12">
-                    <label for="Contact" class="form-label">Contact</label>
-                    <input type="text" class="form-control" id="contact" name="contact" placeholder="Supplier Contact" required>
+                    <label for="age" class="mb-2 text-center">Age</label>
+                    <input type="number" class="form-control mb-4" name="age" placeholder="age" required>
                 </div>
             </div>
 
             <div class="row">
                 <div class="mb-3 col-12">
-                    <label for="Contact" class="form-label">Address</label>
+                    <label for="gender" class="mb-2 text-center">Gender</label>
+                    <select class="form-control select" name="gender" id="gender">
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female"></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-12">
+                    <label for="address" class="mb-2 text-center">Address</label>
                     <textarea  class="form-control" style = "height:150px;" placeholder= "insert address here" name="address"></textarea>
                 </div>
             </div>

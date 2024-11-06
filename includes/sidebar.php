@@ -47,7 +47,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="../../pages/customer/customer.php" class="nav-link">
+                    <a href="../../pages/customers/customer.php" class="nav-link">
                         <i class="fa-solid fa-id-card"></i>
                         <span>Customers</span>
                     </a>
