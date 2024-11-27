@@ -42,6 +42,6 @@
 <script src=" ../../assets/js/custom.js "></script>
 
 
-<script src="../../assets/js/main.js"></script>
-<script src="../../assets/js/delivery.js"></script>
-<script src="../../assets/js/index.js"></script>
+<script src="../../services/main.js"></script>
+<script src="../../services/delivery.js"></script>
+<script src="../../services/index.js"></script>

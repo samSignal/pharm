@@ -18,8 +18,8 @@
             <div class="row g-2">
                 <div class="mb-3 col-md-6">
                     <label for="Supplier Name" class="mb-2 text-center">Supplier Name</label>
-                    <select  class="form-control select" data-live-search="true" data-live-search="true"  name="Supplier"  id="Supplier">
-                    <option selected disabled>Choose..</option>
+                    <select class="form-control select" data-live-search="true" data-live-search-placeholder="Search supplier..." name="Supplier" id="Supplier">
+                      <option selected disabled>Choose..</option>
                           <?php 
                               $supplier = $pdo->prepare('SELECT `name` FROM supplier');
                               $supplier->execute();

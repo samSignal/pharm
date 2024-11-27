@@ -1,6 +1,7 @@
 <?php 
       require_once '../../includes/config.php';
       require_once '../../includes/session.php';
+      
       $deliverysql = $pdo->prepare("SELECT  *  FROM  deliveries
                            GROUP BY Supplier_name
                            ORDER BY Delivery_date DESC ");
