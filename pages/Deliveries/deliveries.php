@@ -19,7 +19,10 @@ ob_start();  // Start output buffering
 <div class="card">
     <div class="card-header header-elements-inline d-flex justify-content-between">
         <h6 class="card-title"><?php echo htmlspecialchars($page_title ?? 'Default Page Title'); ?></h6>
-</button>
+        <button type="button" class="btn btn-primary ms-auto" data-toggle="modal" data-target="#addDeliveryModal">
+            <i class="fa-solid fa-plus"></i> Add Delivery
+        </button>
+
     </div>
 
     <ul class="nav nav-tabs nav-tabs-highlight">
@@ -42,7 +45,7 @@ ob_start();  // Start output buffering
     </div>
 </div>
 
-
+<?php require_once 'makeDelivery.php'; ?>
 <?php
 
 require_once '../../includes/popmsg.php';

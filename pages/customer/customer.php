@@ -25,7 +25,7 @@ ob_start();  // Start output buffering
     <div class="card-body">
         <div class="containerss d-flex flex-wrap justify-content-around">
             <div class="left d-flex mb-4 align-items-center" id="customerLocation" style="width: 48%;">
-                <img src="https://cdn-icons.flaticon.com/png/512/1365/premium/1365700.png?token=exp=1657522440~hmac=979e545cc2ee3f61577599adbabd44d7" alt="">
+                <img src="..\..\assets\images\pill_droplet.png" alt="">
                 <span class="ms-3">
                     <h5>Regular Customer Location</h5>
                     <?php require_once 'custLocationData.php';?>
@@ -33,7 +33,7 @@ ob_start();  // Start output buffering
             </div>
 
             <div class="right d-flex mb-4 align-items-center" id="customerLocation" style="width: 48%;">
-                <img src="https://cdn-icons-png.flaticon.com/512/1484/1484584.png" alt="">
+                <img src="../../assets/images/group.png" alt="Group Icon">
                 <span class="ms-3">
                     <h5>Regular Customers</h5>
                     <?php require_once 'customerData.php';?>
@@ -43,7 +43,7 @@ ob_start();  // Start output buffering
 
         <div class="containerss d-flex flex-wrap justify-content-around">
             <div class="left d-flex mb-4 align-items-center" id="customerLocation" style="width: 48%;">
-                <img src="https://cdn-icons.flaticon.com/png/512/647/premium/647186.png?token=exp=1657522406~hmac=da90b4f351f51f64121a0aade2630664" alt="">
+                <img src="..\..\assets\images\pill_droplet.png" alt="">
                 <span class="ms-3">
                     <h5>Most Bought Product</h5>
                     <?php require_once 'mostBuy.php';?>
@@ -51,7 +51,7 @@ ob_start();  // Start output buffering
             </div>
 
             <div class="right d-flex mb-4 align-items-center" id="customerLocation" style="width: 48%;">
-                <img src="https://cdn-icons-png.flaticon.com/512/822/822143.png" alt="">
+                <img src="..\..\assets\images\pill_droplet.png" alt="">
                 <span class="ms-3">
                     <h5>Least Bought Product</h5>
                     <?php require_once 'leastBuy.php';?>
