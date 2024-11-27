@@ -138,91 +138,107 @@ function addRow2(products){
 }
 
 
-
+/**
+ * Deletes a row from the table.
+ * @param {object} e - The event parameter.
+ */
 function deleterow2(e){
+    // Get the product total cost from the last cell of the row
+    const product_total_cost = parseInt($(e).parent().parent().find('td:last').text(), 10);
+    
+    // Subtract the cost from the total
     product_total_cost = parseInt($(e).parent().parent().find('td:last').text(),10);
     total -= product_total_cost;
+    
+    // Update the total balance
     $('#finaltotal2').val(total);
+    
+    // Remove the row
     $(e).parent().parent().remove();
 }
 
 
-$('#submit2').on('click',function(){
-
-    var payment = $('#pay2').val();
-    var totalBalance = $('#finaltotal2').val();
+$('#submit2').on('click', function () {
+    // Collect basic details
+    var payment = parseFloat($('#pay2').val()) || 0;
+    var totalBalance = parseFloat($('#finaltotal2').val()) || 0;
     var referrence = $('#ref').val();
     var Supplier = $('#Supplier').val();
     var xpdate = $('#xpdate').val();
 
-
-    if(payment < totalBalance){
+    // Validate payment
+    if (payment < totalBalance) {
         Swal.fire(
             'Error!',
-            'Payment is less that total purchased',
+            'Payment is less than total purchased',
             'error'
-        )
-    }
-    else{
-        var productName = 
-                $("input[name='pname[]']").map(function()
-            {
-                return $(this).val();    
-            }).get();
-
-            
-
-        var productqty = 
-                $("input[name='pqty[]']").map(function()
-            {
-                return $(this).val();    
-            }).get();
-
-    
-
-        var productTotal = 
-                $("input[name='ptotal[]']").map(function()
-            {
-                return $(this).val();    
-            }).get();
-
-            
-            
-
-            var rowCount = $('#product_body2 tr').length;
-
-            for(i = 0; i < rowCount; i++){
-                    var product =  productName[i];
-                    var quantity = productqty[i]
-                    var total = productTotal[i]
-                
-                    $.ajax({
-                        url:'DeliveryFunction.php',
-                        method:'POST',
-                        data:{
-                            pname:product,
-                            qty:quantity,
-                            total:total,
-                            Supplier:Supplier,
-                            referrence:referrence,
-                            xpdate:xpdate
-                        },
-                        success: function(data){
-                            setTimeout(function(){
-                                location.reload(1);
-                            }, 900);
-                            Swal.fire({
-                                position: 'top-end',
-                                icon: 'success',
-                                title: 'Transaction Completed',
-                                showConfirmButton: false,
-                                timer: 1500
-                            })
-                        }
-                }); 
-            }
+        );
+        return;
     }
 
+    // Collect product details
+    var productName = $("input[name='pname[]']").map(function () {
+        return $(this).val();
+    }).get();
 
-    
-})
+    var productqty = $("input[name='pqty[]']").map(function () {
+        return $(this).val();
+    }).get();
+
+    var productTotal = $("input[name='ptotal[]']").map(function () {
+        return $(this).val();
+    }).get();
+
+    // Validate product data
+    if (productName.length === 0 || productqty.length === 0 || productTotal.length === 0) {
+        Swal.fire(
+            'Error!',
+            'No products added to the purchase list',
+            'error'
+        );
+        return;
+    }
+
+    // Prepare data for AJAX
+    var rowCount = $('#product_body2 tr').length;
+    var products = [];
+    for (var i = 0; i < rowCount; i++) {
+        products.push({
+            name: productName[i],
+            quantity: productqty[i],
+            total: productTotal[i]
+        });
+    }
+
+    // Send AJAX request
+    $.ajax({
+        url: 'DeliveryFunction.php',
+        method: 'POST',
+        data: {
+            products: JSON.stringify(products),
+            Supplier: Supplier,
+            referrence: referrence,
+            xpdate: xpdate
+        },
+        success: function (data) {
+            // Show success message and reload
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Transaction Completed',
+                showConfirmButton: false,
+                timer: 1500
+            });
+            setTimeout(function () {
+                location.reload();
+            }, 900);
+        },
+        error: function () {
+            Swal.fire(
+                'Error!',
+                'Failed to complete the transaction',
+                'error'
+            );
+        }
+    });
+});
